@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { collection, query, where, getDocs, addDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
-import emailjs from '@emailjs/browser';
 
 export default function RegistrationPage() {
   const { slug, sheet } = useParams();
@@ -40,33 +39,14 @@ export default function RegistrationPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  useEffect(() => {
-    emailjs.init("fdNEB1c-Ij09l8LoD");
-  }, []);
+  //ingatha change pananu bhaya unoda code ahh
 
   const sendEmail = async () => {
     try {
-      // Create the template parameters object
-      const templateParams = {
-        to_email: formData.email, // The recipient's email
-        to_name: formData.studentName,
-        from_name: 'Campus Life(E&T) SRMIST',
-        event_name: eventName,
-        message: `You have successfully registered for ${eventName}!`,
-        reply_to: formData.email, // Optional: For reply-to functionality
-      };
-      
-
-      const result = await emailjs.send(
-        'service_hsvxhjh',
-        'template_maqknvd',
-        templateParams
-      );
-
-      console.log('Email sent successfully:', result);
+      // inga email functionalities vachik arbaaz email send anathu true return aguramari vachiko aduthu status handle pandrathula pannite
       return true;
+
     } catch (error) {
-      console.error('Failed to send email:', error);
       return false;
     }
   };
