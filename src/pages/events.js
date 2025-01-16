@@ -119,7 +119,7 @@ export default function EventsPage() {
 
               <button
                 className="register-button"
-                onClick={() => handleRegister(event.slug.current, event.sheet)}
+                onClick={() => handleRegister(event.slug, event.sheet)}
               >
                 Register Now
               </button>

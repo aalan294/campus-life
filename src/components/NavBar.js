@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
@@ -23,44 +23,44 @@ const Navbar = () => {
       </div>
       <ul>
         <li>
-          <a 
-            href="#home" 
-            onClick={(e) => handleNavigation(e, 'home')}
+          
+          <Link 
+            to="/" 
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#about" 
+          <Link 
+            to="/about" 
             onClick={(e) => handleNavigation(e, 'about')}
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="/events" 
+          <Link 
+            to="/events" 
             // onClick={(e) => handleNavigation(e, 'events')}
           >
             Events
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#faculty" 
+          <Link 
+            to="/faculty" 
             onClick={(e) => handleNavigation(e, 'faculty')}
           >
             Faculty
-          </a>
+          </Link>
         </li>
         <li>
-          <a 
-            href="#team" 
+          <Link 
+            to="/team" 
             onClick={(e) => handleNavigation(e, 'team')}
           >
             Team
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
