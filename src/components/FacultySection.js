@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import vp from '../assets/faculties/vp.jpg'
+import fc from '../assets/faculties/fc.jpg'
 
 const facultyData = [
   
@@ -30,7 +31,7 @@ const facultyData = [
   {
     name: "Dr. Visnu Dharshini",
     position: "Campus Life Overall Coordinator",
-    image: "assets/faculties/fc1.jpg",
+    image: fc,
     details: "Department of Computer Science and Engineering"
 },
 {

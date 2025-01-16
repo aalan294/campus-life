@@ -6,11 +6,11 @@ const HomeSection = () => {
       <div className="hero">
         <div className="hero-background"></div>
         <div className="hanging-gallery">
-          {[1, 14, 6, 8, 14].map((eventId, index) => (
+          {[1, 14, 9, 8, 14].map((eventId, index) => (
             <div className="hanging-image" key={index}>
               <div className="rope"></div>
               <div className="frame">
-                <img src={`./assets/events/${eventId}.jpg`} alt="Event" />
+                <img src={`./assets/events/${eventId}.JPG`} alt="Event" />
               </div>
             </div>
           ))}
