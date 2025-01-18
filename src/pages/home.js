@@ -7,7 +7,7 @@ import EventsSection from '../components/EventsSection.js';
 import FacultySection from '../components/FacultySection.js';
 
 import '../style.css';
-import Marque from '../components/Marque.js';
+// import Marque from '../components/Marque.js';
 import api from '../API/api.js'
 import FacultySection2 from '../components/FacultySection2.js';
 
@@ -60,7 +60,7 @@ const Home = () => {
   return (
     <div>
       <HomeSection />
-      <Marque />
+      {/* <Marque /> */}
       <AboutSection />
       <EventsSection />
       <FacultySection />

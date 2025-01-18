@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logos/logo.png'
 import Marque from './Marque';
 
 const HomeSection = () => {
@@ -22,11 +23,14 @@ const HomeSection = () => {
             <h2>SRMIST (E&T) Ramapuram</h2>
           </div>
           <div className="hero-logo-container">
-            <img src="./assets/logos/logo2.png" alt="SRM Logo" className="hero-logo" />
+            <img src={logo} alt="SRM Logo" className="hero-logo" />
           </div>
           <div className="quote-container">
             <p className="quote">"The Heart of Campus"</p>
             <p className="quote-subtitle">Where Moments Become Memories, and Dreams Take Flight</p>
+          </div>
+          <div>
+            <Marque/>
           </div>
         </div>
       </div>

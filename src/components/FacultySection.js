@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import vp from '../assets/faculties/vp.jpg'
+import vp from '../assets/faculties/vp1.jpg'
+import cochairman from '../assets/faculties/co-chairman1.jpg'
 
 const facultyData = [
   
@@ -12,7 +13,7 @@ const facultyData = [
 {
     name: "Mr. S. Niranjan",
     position: "Co-Chairman",
-    image: "assets/faculties/co-chairman.jpg",
+    image: cochairman,
     details: "Co-Chairman\nSRM Group of Institutions\nRamapuram & Trichy"
 },
 {

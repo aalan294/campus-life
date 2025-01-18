@@ -1047,8 +1047,8 @@ html {
     }
 
     .hero-logo-container {
-        width: 120px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     section h2 {
@@ -1071,7 +1071,7 @@ html {
     }
 
     .hero-logo-container {
-        width: 120px;
+        width: 50px;
         height: 60px;
     }
 
@@ -1375,6 +1375,7 @@ section#about h2 {
     
     .hero h2 {
         font-size: 1.4rem;
+        margin-bottom: 0;
     }
     
     .quote {
@@ -1389,6 +1390,7 @@ section#about h2 {
     /* Adjust hero content vertical alignment */
     .hero-content {
         justify-content: center;
+        align-items: center;
         padding-top: 60px; /* Account for navbar */
     }
 }
@@ -1412,6 +1414,7 @@ section#about h2 {
     
     .hero-content {
         padding-top: 50px;
+        padding-bottom: 0;
     }
 }
  
@@ -1578,4 +1581,16 @@ section#about h2 {
 .member-social a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
+}
+.hero-content{
+    padding-bottom: 0;;
+    margin-bottom: 0;
+}
+.title-container{
+    padding: 0;
+    margin: 0;
+}
+.title-container h2{
+    margin-bottom: 0;;
+    padding-bottom: 0;
 }
