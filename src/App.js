@@ -7,7 +7,6 @@ import Home from './pages/home';
 import WebTeam from './pages/webteam.js';
 import Footer from './components/Footer';
 import EventsPage from './pages/events';
-import RegisterPage from './pages/registerpage';
 import './style.css';
 import api from './API/api.js'
 
@@ -132,7 +131,6 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/webteam" element={<WebTeam />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/register/:slug/:sheet" element={<RegisterPage />} />
         </Routes>
         <Footer />
       </div>
