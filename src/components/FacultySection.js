@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import vp from '../assets/faculties/vp.jpg'
-import fc from '../assets/faculties/fc.jpg'
 
 const facultyData = [
   
@@ -27,30 +26,18 @@ const facultyData = [
   position: "Vice Principal",
   image: vp,
   details: "Vice Principal (Admin)"
-},
-  {
-    name: "Dr. Visnu Dharshini",
-    position: "Campus Life Overall Coordinator",
-    image: fc,
-    details: "Department of Computer Science and Engineering"
-},
-{
-    name: "Dr. Monika",
-    position: "Campus Life Overall Coordinator",
-    image: "assets/faculties/fc2.jpg",
-    details: "Department of Biotechnology"
 }
-  // Add more faculty members...
 ];
 
 const FacultySection = () => {
   useEffect(() => {
-    const facultyGrid = document.querySelector('.faculty-grid');
+    const facultyGrid = document.querySelector('.dict');
     facultyGrid.innerHTML = '';
 
     facultyData.forEach((faculty) => {
       const card = document.createElement('div');
-      card.className = 'person-card';
+      card.className = 'dic person-card';
+      
       card.innerHTML = `
         <img src="${faculty.image}" alt="${faculty.name}">
         <div class="person-info">
@@ -65,8 +52,8 @@ const FacultySection = () => {
 
   return (
     <section id="faculty">
-      <h2>Our Faculty</h2>
-      <div className="faculty-grid"></div>
+      <h2>Our Dignitaries</h2>
+      <div className="faculty-grid dict"></div>
     </section>
   );
 };

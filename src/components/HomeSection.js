@@ -1,4 +1,5 @@
 import React from 'react';
+import Marque from './Marque';
 
 const HomeSection = () => {
   return (

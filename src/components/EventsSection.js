@@ -1,48 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { collection, query, orderBy, getDocs } from 'firebase/firestore';
-import { pinata } from '../config';
-import { db } from '../firebase/config';
+import api from '../API/api'
 
 const EventsSection = () => {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Function to fetch the signed URL from Pinata
-  const getSignedUrl = async (cid) => {
-    try {
-      const signedUrl = await pinata.gateways.createSignedURL({
-        cid: cid,
-        expires: 600, // Set expiration time (in seconds)
-      });
-      return signedUrl;
-    } catch (err) {
-      console.error('Error fetching signed URL:', err);
-      return ''; // Return empty if error occurs
-    }
-  };
+
 
   // Fetch slides from Firestore and convert CID to signed URL
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const slidesRef = collection(db, 'homepageSlides');
-        const q = query(slidesRef, orderBy('order', 'asc'));
-        const querySnapshot = await getDocs(q);
-
-        const fetchedSlides = querySnapshot.docs.map(async (doc) => {
-          const slideData = doc.data();
-          const imageUrl = await getSignedUrl(slideData.imageUrl); // Assuming 'cid' is the field name
-
-          return {
-            id: doc.id,
-            ...slideData,
-            imageUrl, // Add resolved image URL to the slide data
-          };
-        });
-
-        // Resolve all promises to get final slides array with image URLs
-        const finalSlides = await Promise.all(fetchedSlides);
-        setSlides(finalSlides);
+        const response = await api.get('/events/slide');
+        setSlides(response.data);
       } catch (error) {
         console.error('Error fetching slides:', error);
       }
@@ -94,12 +64,12 @@ const EventsSection = () => {
               className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
             >
               <img 
-                src={slide.imageUrl} 
-                alt={slide.title}
+                src={`http://localhost:3500/${slide.image}`} 
+                alt={slide.eventName}
                 className="w-full h-auto"
               />
               <div className="carousel-title-overlay">
-                {slide.title}
+                {slide.eventName}
               </div>
             </div>
           ))}

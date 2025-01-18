@@ -1,4 +1,5 @@
 import React from 'react';
+import im from '../assets/events/rmp.jpeg'
 
 const AboutSection = () => {
   return (
@@ -13,7 +14,7 @@ const AboutSection = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="./assets/events/9.JPG" alt="Campus Life Event" />
+          <img src={im} alt="Campus Life Event" />
         </div>
       </div>
     </section>
