@@ -64,7 +64,7 @@ const EventsSection = () => {
               className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
             >
               <img 
-                src={`http://localhost:3500/${slide.image}`} 
+                src={`https://campus-life-server.onrender.com/${slide.image}`} 
                 alt={slide.eventName}
                 className="w-full h-auto"
               />

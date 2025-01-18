@@ -81,7 +81,7 @@ const AdModal = ({ isOpen, onClose, imageUrl, isLoading }) => {
         {isLoading ? (
           <LoadingText>Loading image...</LoadingText>
         ) : imageUrl ? (
-          <AdImage src={`http://localhost:3500/${imageUrl}`} alt="Advertisement" />
+          <AdImage src={`https://campus-life-server.onrender.com/${imageUrl}`} alt="Advertisement" />
         ) : (
           <LoadingText>Failed to load image</LoadingText>
         )}

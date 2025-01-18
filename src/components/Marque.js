@@ -24,7 +24,7 @@ const Marque = () => {
           return (
             <img
               key={img._id}
-              src={`http://localhost:3500/${img.image}`}
+              src={`https://campus-life-server.onrender.com/${img.image}`}
               style={{
                 width: "200px",
                 height: "100px",

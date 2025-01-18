@@ -46,7 +46,7 @@ export default function EventsPage() {
           <div key={event._id} className="event-card">
             {event.imageUrl && (
               <div className="event-image">
-                <img src={`http://localhost:3500/${event.imageUrl}`} alt={event.title} />
+                <img src={`https://campus-life-server.onrender.com/${event.imageUrl}`} alt={event.title} />
               </div>
             )}
             <div className="event-content">
