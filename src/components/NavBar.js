@@ -143,15 +143,6 @@ const Navbar = () => {
             Faculty
           </Link>
         </NavItem>
-        <NavItem>
-          <Link 
-            to="/team" 
-            className={isActive('/team')}
-            onClick={(e) => handleNavigation(e, 'team')}
-          >
-            Team
-          </Link>
-        </NavItem>
       </NavLinks>
     </NavbarContainer>
   );
