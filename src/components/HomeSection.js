@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from '../assets/logos/logo.png'
+import logo from '../assets/logos/clogo.png'
 import Marque from './Marque';
+import styled from 'styled-components';
 
 const HomeSection = () => {
   return (
@@ -19,7 +20,7 @@ const HomeSection = () => {
         </div>
         <div className="hero-content">
           <div className="title-container">
-            <h1>Welcome to <span className="highlight">Campus Life</span></h1>
+            <StyledHeading>Welcome to <span className="highlight">Campus Life</span></StyledHeading>
             <h2>SRMIST (E&T) Ramapuram</h2>
           </div>
           <div className="hero-logo-container">
@@ -30,12 +31,19 @@ const HomeSection = () => {
             <p className="quote-subtitle">Where Moments Become Memories, and Dreams Take Flight</p>
           </div>
           <div>
-            <Marque/>
+            <Marque />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+const StyledHeading = styled.h1`
+  /* Desktop view */
+  @media (min-width: 1024px) {
+    margin-top: 5rem;
+  }
+`;
 
 export default HomeSection;

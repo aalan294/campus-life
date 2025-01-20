@@ -120,7 +120,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-.hero-background {
+/* .hero-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +131,7 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-}
+} */
 
 .hanging-gallery {
     position: absolute;
@@ -527,7 +527,6 @@ section h2 {
 .carousel {
     width: 80%;
     max-width: 1200px;
-    height: 500px;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -537,7 +536,6 @@ section h2 {
 
 .carousel-inner {
     width: 100%;
-    height: 100%;
     position: relative;
 }
 
@@ -1110,7 +1108,7 @@ section#about {
 }
 
 section#about h2 {
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
 }
 
 .about-content {
@@ -1593,4 +1591,171 @@ section#about h2 {
 .title-container h2{
     margin-bottom: 0;;
     padding-bottom: 0;
+}
+
+section#about h2 {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to bottom, #2b2b2b, #3a3a3a);
+    padding: 5rem 2rem 3rem;
+    color: #e0e0e0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+}
+
+/* Contact Section */
+.footer-section h3 {
+    font-family: 'Cinzel', serif;
+    color: #ffd700; /* Golden yellow for headings */
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #ffd700;
+}
+
+.footer-section p {
+    font-family: 'Montserrat', sans-serif;
+    color: #c8c8c8; /* Softer text color */
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.footer-section .address {
+    font-weight: 500;
+    color: #e6e6e6;
+    margin-bottom: 1.5rem;
+}
+
+/* Toll-Free Section (if needed in future updates) */
+.toll-free {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 215, 0, 0.08); /* Golden tint */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Links Sections */
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li a {
+    color: #d0d0d0; /* Light text color for links */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-section ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffd700; /* Golden highlight on hover */
+    transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+}
+
+.footer-section ul li a:hover::after {
+    width: 100%;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-links a:hover {
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.15); /* Golden hover effect */
+    transform: translateY(-3px);
+}
+
+/* Media Queries for Footer */
+@media screen and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-section:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 4rem 1.5rem 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .toll-free {
+        max-width: 400px;
+        margin: 2rem auto;
+    }
 }

@@ -4,14 +4,10 @@ import im from '../assets/events/rmp.jpeg'
 const AboutSection = () => {
   return (
     <section id="about">
-      <h2>About Campus Life</h2>
+      <h2 style={{marginBottom:"2rem"}} >About Campus Life</h2>
       <div className="about-content">
         <div className="about-text">
-          <p>
-            Campus Life at SRM Ramapuram E&T is the vibrant and dynamic heart of all cultural activities within the Engineering and Technology department. Comprising a passionate group of students and faculty, we are dedicated to fostering creativity, collaboration, and inclusivity through various events and initiatives.
-            From organizing cultural festivals, workshops, and talent showcases to creating unforgettable experiences that celebrate diversity and innovation, Campus Life ensures that every student feels connected and inspired.
-            Our mission is to enhance the student journey by blending academics with cultural enrichment, making SRM Ramapuram E&T a thriving hub of learning and fun.
-          </p>
+         <p>Campus Life at SRM Ramapuram E&T is the heart of cultural activities, driven by passionate students and faculty. We organize festivals, workshops, and talent showcases, fostering creativity, collaboration, and inclusivity. From celebrating diversity to inspiring innovation, our events bring the community together. With every initiative, we aim to create cherished memories and meaningful connections.</p>
         </div>
         <div className="about-image">
           <img src={im} alt="Campus Life Event" />

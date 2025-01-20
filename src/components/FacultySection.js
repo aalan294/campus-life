@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import vp from '../assets/faculties/vp1.jpg'
 import cochairman from '../assets/faculties/co-chairman1.jpg'
+import dean from '../assets/faculties/dean.jpg'
 
 const facultyData = [
   
@@ -19,7 +20,7 @@ const facultyData = [
 {
     name: "Dr. M. Sakthi Ganesh",
     position: "Dean E&T",
-    image: "assets/faculties/dean.jpg",
+    image: dean,
     details: "Dean of Engineering & Technology"
 },
 {

@@ -120,7 +120,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-.hero-background {
+/* .hero-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +131,8 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-}
+} */
+
 
 .hanging-gallery {
     position: absolute;
@@ -2131,4 +2132,6 @@ section#about h2 {
     }
   }
   
-  
+  .hero-background{
+    background-color: black;
+  }
