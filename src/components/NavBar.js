@@ -144,10 +144,9 @@ const Navbar = () => {
           </Link>
         </NavItem>
         <NavItem>
-          <Link 
-            to="/team" 
+        <Link 
+            to="/teams" 
             className={isActive('/team')}
-            onClick={(e) => handleNavigation(e, 'team')}
           >
             Team
           </Link>

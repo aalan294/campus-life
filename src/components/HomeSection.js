@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../assets/logos/clogo.png'
+import logo from '../assets/logos/logof.jpg'
 import Marque from './Marque';
 import styled from 'styled-components';
 
 const HomeSection = () => {
   return (
     <section id="home">
-      <div className="hero">
+      <div className="hero" style={{paddingTop:0}}>
         <div className="hero-background"></div>
         <div className="hanging-gallery">
           {[1, 14, 9, 8, 14].map((eventId, index) => (
@@ -21,15 +21,15 @@ const HomeSection = () => {
         <div className="hero-content">
           <div className="title-container">
             <StyledHeading>Welcome to <span className="highlight">Campus Life</span></StyledHeading>
-            <h2>SRMIST (E&T) Ramapuram</h2>
+            <StyleH2>SRMIST (E&T) Ramapuram</StyleH2>
           </div>
           <div className="hero-logo-container">
-            <img src={logo} alt="SRM Logo" className="hero-logo" />
+            <StyleLogo src={logo} alt="SRM Logo" className="hero-logo" />
           </div>
-          <div className="quote-container">
+          <StyleQuote  className="quote-container">
             <p className="quote">"The Heart of Campus"</p>
             <p className="quote-subtitle">Where Moments Become Memories, and Dreams Take Flight</p>
-          </div>
+          </StyleQuote>
           <div>
             <Marque />
           </div>
@@ -39,11 +39,29 @@ const HomeSection = () => {
   );
 };
 
+const StyleLogo = styled.img`
+  border-radius: 20px;
+`
+// const StyleLogo = styled.img`
+//   filter: drop-shadow( 4px 4px 10px rgba(234, 233, 233, 0.8)); 
+//     border-radius: 8px;`
+
 const StyledHeading = styled.h1`
   /* Desktop view */
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     margin-top: 5rem;
-  }
+  } */
+   margin-top:6rem;
+   margin-bottom: 0;
 `;
+const StyleH2 = styled.h2`
+   margin: 0;
+`;
+
+const StyleQuote = styled.div`
+.quote-subtitle{
+  margin-bottom:0;
+}
+`
 
 export default HomeSection;

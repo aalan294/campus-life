@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import vp from '../assets/faculties/vp.jpg'
 import fc from '../assets/faculties/fc.jpg'
+import styled from 'styled-components';
 
 const facultyData = [
   {
@@ -41,9 +42,26 @@ const FacultySection2 = () => {
   return (
     <section id="faculty">
       <h2>Our Faculty</h2>
-      <div className="faculty-grid fact"></div>
+      <StyledDiv className="fact"></StyledDiv>
     </section>
   );
 };
+
+const StyledDiv = styled.div`
+  width: 100vw;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  .fac{
+    width: 300px;
+    height: 450px;
+    .person-info{
+      background-color: inherit;
+    }
+  }
+
+`
 
 export default FacultySection2;

@@ -18,7 +18,7 @@ const Marque = () => {
     fetchSlides();
   },[])
   return (
-    <Marquee speed={100} direction="right" autoFill="true">
+    <Marquee speed={20} direction="right" autoFill="true">
       <div className="marquee">
         { images && images.map((img) => {
           return (
@@ -26,8 +26,8 @@ const Marque = () => {
               key={img._id}
               src={`https://campus-life-server.onrender.com/${img.image}`}
               style={{
-                width: "200px",
-                height: "100px",
+                width: "250px",
+                height: "150px",
                 margin: 30,
                 marginBottom: 70,
                 objectFit: "cover",

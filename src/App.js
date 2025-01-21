@@ -151,7 +151,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/webteam" element={<WebTeam />} />
+          <Route path="/teams" element={<WebTeam />} />
           <Route path="/events" element={<EventsPage />} />
         </Routes>
         <Footer />
