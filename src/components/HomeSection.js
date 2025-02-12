@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logos/logof.jpg'
+import logo from '../assets/logos/logo.png'
 import Marque from './Marque';
 import styled from 'styled-components';
 
@@ -20,8 +20,8 @@ const HomeSection = () => {
         </div>
         <div className="hero-content">
           <div className="title-container">
-            <StyledHeading>Welcome to <span className="highlight">Campus Life</span></StyledHeading>
-            <StyleH2>SRMIST (E&T) Ramapuram</StyleH2>
+            <StyledHeading>SRMIST (E&T) Ramapuram</StyledHeading>
+            <StyleH2>Welcome to <span className="highlight">Campus Life</span></StyleH2>
           </div>
           <div className="hero-logo-container">
             <StyleLogo src={logo} alt="SRM Logo" className="hero-logo" />

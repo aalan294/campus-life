@@ -104,7 +104,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <Logo>
-        <img src="assets/logos/logo1.webp" alt="SRM Logo" />
+        <img src="https://i.ibb.co/S7B2Zpqv/camp.png" alt="SRM Logo" />
       </Logo>
       
       <HamburgerButton onClick={toggleMenu}>
