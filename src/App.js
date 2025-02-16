@@ -10,7 +10,7 @@ import EventsPage from './pages/events';
 import './style.css';
 import api from './API/api.js';
 
-// Styled Components
+// Styled Components for Modal
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -89,6 +89,7 @@ const RegisterButton = styled(Link)`
   }
 `;
 
+// AdModal Component
 const AdModal = ({ isOpen, onClose, imageUrl, isLoading }) => {
   if (!isOpen) return null;
 
@@ -102,8 +103,13 @@ const AdModal = ({ isOpen, onClose, imageUrl, isLoading }) => {
           <LoadingText>Loading image...</LoadingText>
         ) : imageUrl ? (
           <>
-            <AdImage src={`https://campus-life-server.onrender.com/${imageUrl}`} alt="Advertisement" />
-            <RegisterButton onClick={onClose} to="/events">Register</RegisterButton>
+            <AdImage
+              src={`https://campus-life-server.onrender.com/${imageUrl}`}
+              alt="Advertisement"
+            />
+            <RegisterButton onClick={onClose} to="/events">
+              Register
+            </RegisterButton>
           </>
         ) : (
           <LoadingText>Failed to load image</LoadingText>
@@ -118,20 +124,20 @@ const App = () => {
   const [adImageUrl, setAdImageUrl] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchLatestPoster = async () => {
-      setIsLoading(true);
-      try {
-        const response = await api.get('/posters');
-        console.log(response);
-        setAdImageUrl(response.data[0].image);
-      } catch (error) {
-        console.error('Error fetching posters:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const fetchLatestPoster = async () => {
+    setIsLoading(true);
+    try {
+      const response = await api.get('/posters');
+      console.log(response);
+      setAdImageUrl(response.data[0].image);
+    } catch (error) {
+      console.error('Error fetching posters:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchLatestPoster();
   }, []);
 

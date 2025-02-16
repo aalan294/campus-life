@@ -66,6 +66,40 @@ nav {
     height: 60px;
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
 }
+/* Ribbon Animation */
+.ribbon {
+    position: relative;
+    display: inline-block;
+    background-color: #ff5733;
+    color: white;
+    padding: 8px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .ribbon:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 200%;
+    height: 5px;
+    background-color: #ffffff;
+    animation: ribbonCut 2s forwards;
+  }
+  
+  @keyframes ribbonCut {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 
 nav ul {
     display: flex;

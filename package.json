@@ -9,6 +9,7 @@
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "firebase": "^11.1.0",
+    "fireworks-js": "^2.10.8",
     "lucide-react": "^0.473.0",
     "pinata": "^1.10.1",
     "react": "^19.0.0",

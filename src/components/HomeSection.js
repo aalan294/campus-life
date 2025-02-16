@@ -20,8 +20,11 @@ const HomeSection = () => {
         </div>
         <div className="hero-content">
           <div className="title-container">
-            <StyledHeading>SRMIST (E&T) Ramapuram</StyledHeading>
-            <StyleH2>Welcome to <span className="highlight">Campus Life</span></StyleH2>
+            <StyledHeading>SRM Institue Of Science And Technology Ramapuram</StyledHeading>
+            <StyleH2>
+  <strong>Welcome to <span className="highlight">Campus Life</span></strong>
+</StyleH2>
+
           </div>
           <div className="hero-logo-container">
             <StyleLogo src={logo} alt="SRM Logo" className="hero-logo" />
@@ -51,7 +54,7 @@ const StyledHeading = styled.h1`
   /* @media (min-width: 1024px) {
     margin-top: 5rem;
   } */
-   margin-top:6rem;
+   margin-top:12rem;
    margin-bottom: 0;
 `;
 const StyleH2 = styled.h2`
